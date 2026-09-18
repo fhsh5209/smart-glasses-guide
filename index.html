@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>監考須知：智慧眼鏡辨識與處置</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500&display=swap" rel="stylesheet">
+<style>
+@page{size:A4;margin:0}
+:root{
+  --ink:#3E1F00;--soft:#7a5a45;
+  --bg:#FFFAF5;--bg2:#FFF2E5;--card:#FBF8F5;
+  --coral:#e76f51;--caramel:#e9944a;--blue:#2b5f8a;--green:#4a7c59;
+  --line:#e6d8cc;--cool:#EEF9FC;--mint:#ECF8F7;--coral-bg:#FFF0ED;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);font-family:"Microsoft JhengHei","Noto Sans TC",sans-serif;color:var(--ink);font-size:12pt;line-height:22pt}
+.page{max-width:900px;margin:0 auto;padding:10mm 16px 12mm}
+.page+.page{border-top:1px solid var(--line);padding-top:8mm}
+@media print{
+  body{font-size:11pt;line-height:20pt}
+  .page{max-width:none;padding:8mm 12mm;page-break-after:always;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+
+/* header */
+.hd{background:linear-gradient(135deg,#492207,#6b4630);color:var(--bg);border-radius:10px;padding:36px 32px 28px;margin-bottom:5mm}
+.hd .kicker{font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-size:13pt;color:#e8cdb8;letter-spacing:.06em;margin-bottom:6px}
+.hd h1{font-size:22pt;font-weight:700;letter-spacing:2px;line-height:1.35}
+.hd .sub{color:#e8cdb8;font-size:11pt;margin-top:10px;line-height:20pt}
+.hd .meta{color:#d9bda6;font-size:9pt;margin-top:14px;display:flex;flex-wrap:wrap;gap:12px}
+
+h2{font-size:14pt;font-weight:700;color:var(--ink);margin-bottom:3mm;letter-spacing:1px}
+h2::before{content:"";display:block;width:28px;height:3px;background:var(--caramel);border-radius:2px;margin-bottom:2mm}
+h3{font-size:12pt;font-weight:700;margin:3mm 0 1.5mm}
+
+/* cards */
+.card{background:#fff;border-radius:10px;padding:3.5mm 4.5mm;margin:2mm 0;border:1px solid var(--line);box-shadow:0 1px 4px rgba(73,34,7,.04)}
+.card.cool{background:var(--cool);border-color:#c8dfe8}
+.card.coral{background:var(--coral-bg);border-color:#e8c8c0}
+.card.mint{background:var(--mint);border-color:#c0ddd8}
+
+/* lists */
+ul,ol{padding-left:5.5mm}
+li{margin:0.8mm 0}
+li b{color:var(--ink)}
+
+/* grid layouts */
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:4mm}
+.row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:3mm}
+
+/* steps */
+.step{background:#fff;border:1px solid var(--line);border-radius:10px;padding:3mm 3.5mm;box-shadow:0 1px 4px rgba(73,34,7,.04)}
+.step .num{display:inline-block;background:var(--ink);color:var(--bg);border-radius:50%;width:5.5mm;height:5.5mm;text-align:center;line-height:5.5mm;font-size:10pt;font-weight:700;margin-right:1.5mm}
+
+/* case box */
+.case{background:#fff;border:1px solid #e8c8c0;border-radius:10px;padding:3mm 3.5mm;margin:1.5mm 0;box-shadow:0 1px 4px rgba(73,34,7,.04)}
+.case b{color:var(--coral)}
+
+/* section spacing */
+section{margin-bottom:5mm}
+
+/* table */
+table{width:100%;border-collapse:collapse;font-size:11pt;line-height:20pt;margin:2mm 0}
+th,td{padding:1.5mm 2.5mm;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+th{background:var(--bg2);font-weight:700;font-size:11pt}
+
+/* photo area */
+.photos{display:grid;grid-template-columns:1fr 1fr 1fr;gap:3mm;margin:3mm 0}
+.photos figure{margin:0;background:#fff;border-radius:10px;overflow:hidden;border:1px solid var(--line);box-shadow:0 1px 4px rgba(73,34,7,.04)}
+.photos img{width:100%;height:auto;max-height:60mm;object-fit:cover;display:block}
+.photos figcaption{font-size:9pt;line-height:15pt;padding:1.5mm 2mm;color:var(--soft)}
+.photos figcaption b{color:var(--ink)}
+
+/* product grid */
+.product-grid{display:grid;grid-template-columns:1fr 1fr;gap:4mm;margin:3mm 0}
+.product-card{background:#fff;border-radius:10px;overflow:hidden;border:1px solid var(--line);display:flex;flex-direction:row;box-shadow:0 1px 4px rgba(73,34,7,.04)}
+.product-card img{width:45%;height:auto;min-height:30mm;object-fit:cover;display:block}
+.product-info{padding:2.5mm 3mm;flex:1}
+.product-info h3{font-size:11pt;margin:0 0 1mm}
+.product-info p{font-size:10pt;line-height:17pt;margin:1mm 0}
+.product-info a{font-size:9pt;color:var(--blue);text-decoration:none}
+.product-info a:hover{text-decoration:underline}
+.tag{display:inline-block;font-size:8pt;font-weight:700;padding:.5mm 2mm;border-radius:999px;background:var(--caramel);color:#fff;margin-bottom:1mm}
+
+/* diagram figures */
+figure.diagram{margin:3mm 0;background:#fff;border:1px solid var(--line);border-radius:10px;padding:3mm;overflow:hidden;box-shadow:0 1px 4px rgba(73,34,7,.04)}
+figure.diagram svg{width:100%;height:auto;display:block}
+figure.diagram figcaption{font-size:9.5pt;line-height:16pt;color:var(--soft);margin-top:2mm;text-align:center}
+figure.diagram figcaption b{color:var(--ink)}
+
+/* big rule */
+.bigbox{background:var(--ink);color:var(--bg);border-radius:10px;padding:3.5mm 4mm;margin:3mm 0;font-weight:700;font-size:12pt;text-align:center;line-height:22pt}
+
+/* alternating section backgrounds */
+section:nth-child(even){background:#f5f4f2;border-radius:12px;padding:4mm 5mm;margin-left:-5mm;margin-right:-5mm}
+
+/* footer */
+.ft{color:var(--soft);font-size:8.5pt;line-height:14pt;border-top:1px solid var(--line);padding-top:2mm;margin-top:auto;display:flex;justify-content:space-between}
+</style>
+</head>
+<body>
+
+<!-- ==================== 第一頁：辨識 ==================== -->
+<div class="page">
+
+  <div class="hd">
+    <div class="kicker">Invigilator's Field Guide</div>
+    <h1>監考須知｜智慧眼鏡辨識與處置</h1>
+    <div class="sub">遠看幾乎分不出來。摘下來看、摸一摸，三十秒就能定案。</div>
+    <div class="meta"><span>國立鳳新高中 教務處試務組</span><span>段考・模擬考共用</span><span>2026-09 初稿</span></div>
+  </div>
+
+  <!-- 背景 -->
+  <section>
+    <h2>為什麼要知道這件事</h2>
+    <p>2026 年已有兩起公開案例，都不是靠「看到鏡頭」抓到的，而是<b>先覺得人不對勁，再近距離確認</b>。</p>
+    <div class="row2">
+      <div class="case">
+        <b>台大醫牙二階筆試（2026.06）</b>：監試人員覺得考生頭愈來愈低，走近發現換了一副黑框眼鏡，一摸<b>「很燙、使用中」</b>。處分：該科零分。
+      </div>
+      <div class="case">
+        <b>115 分科測驗（2026.07）</b>：監試人員覺得黑框眼鏡不對勁，下一科以<b>金屬探測器</b>掃描有反應。鏡腳有電源開關、多處用黑膠帶包住。處分：取消考試資格。
+      </div>
+    </div>
+  </section>
+
+  <!-- 怎麼看 -->
+  <section>
+    <h2>怎麼看：鏡腳是重點，不是鏡片</h2>
+    <div style="display:flex;gap:5mm;align-items:flex-start;margin-bottom:3mm">
+      <div style="flex:1">
+        <p>電池、晶片、喇叭、麥克風全藏在鏡腳裡。越來越多新款<b>沒有鏡頭</b>，只靠鏡片顯示或語音，外觀跟普通眼鏡幾乎一樣。</p>
+        <p style="margin-top:2mm">右圖是「有顯示」款的鏡片實拍——<b>文字直接投在鏡片上，只有戴的人看得到</b>，旁人從正面完全無法察覺。這就是為什麼光看鏡片不夠，要看鏡腳。</p>
+        <p style="margin-top:2mm">下面兩張示意圖標出所有「普通眼鏡不該有」的東西。</p>
+      </div>
+      <figure style="flex:0 0 42%;margin:0;border-radius:10px;overflow:hidden;border:1px solid var(--line);box-shadow:0 1px 4px rgba(73,34,7,.04)">
+        <img src="photos/ai-glasses-hud-display-exam.webp" alt="智慧眼鏡鏡片顯示文字實拍" style="width:100%;display:block">
+        <figcaption style="font-size:9pt;line-height:15pt;padding:1.5mm 2.5mm;color:var(--soft);background:#fff">鏡片上的綠色文字——戴的人看得到，旁人看不到</figcaption>
+      </figure>
+    </div>
+
+    <figure class="diagram">
+      <svg viewBox="0 0 900 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="智慧眼鏡正面示意圖">
+        <defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3E1F00"/></marker></defs>
+        <path d="M150,150 L60,120" stroke="#3E1F00" stroke-width="22" stroke-linecap="round" fill="none"/>
+        <path d="M750,150 L840,120" stroke="#3E1F00" stroke-width="22" stroke-linecap="round" fill="none"/>
+        <path d="M150,120 Q150,95 175,95 L395,95 Q420,95 420,120 L420,195 Q420,225 390,225 L180,225 Q150,225 150,195 Z" fill="#5b3a22" stroke="#3E1F00" stroke-width="6"/>
+        <path d="M480,120 Q480,95 505,95 L725,95 Q750,95 750,120 L750,195 Q750,225 720,225 L510,225 Q480,225 480,195 Z" fill="#5b3a22" stroke="#3E1F00" stroke-width="6"/>
+        <path d="M165,125 Q165,108 182,108 L388,108 Q405,108 405,125 L405,192 Q405,212 385,212 L185,212 Q165,212 165,192 Z" fill="#dbebf5" opacity=".85"/>
+        <path d="M495,125 Q495,108 512,108 L718,108 Q735,108 735,125 L735,192 Q735,212 715,212 L515,212 Q495,212 495,192 Z" fill="#dbebf5" opacity=".85"/>
+        <path d="M420,140 Q450,120 480,140" stroke="#3E1F00" stroke-width="10" fill="none" stroke-linecap="round"/>
+        <rect x="118" y="112" width="40" height="52" rx="8" fill="#3E1F00"/>
+        <rect x="742" y="112" width="40" height="52" rx="8" fill="#3E1F00"/>
+        <circle cx="138" cy="130" r="9" fill="#1b1b1b" stroke="#c9a27e" stroke-width="3"/>
+        <circle cx="138" cy="130" r="3" fill="#6fa8dc"/>
+        <circle cx="762" cy="130" r="6" fill="#fff" stroke="#e76f51" stroke-width="3"/>
+        <g font-family="Microsoft JhengHei, Noto Sans TC, sans-serif" font-size="17" fill="#3E1F00" font-weight="700">
+          <line x1="138" y1="118" x2="120" y2="55" stroke="#3E1F00" stroke-width="2" marker-end="url(#arr)" transform="rotate(180 129 86)"/>
+          <text x="30" y="48">① 鏡頭（外側上角、靠鉸鏈）</text>
+          <line x1="762" y1="118" x2="790" y2="55" stroke="#3E1F00" stroke-width="2"/>
+          <text x="600" y="48">② 錄影指示燈（另一側對稱）</text>
+          <line x1="138" y1="170" x2="120" y2="270" stroke="#3E1F00" stroke-width="2"/>
+          <text x="30" y="292">③ 鉸鏈處特別粗壯、方正</text>
+          <line x1="800" y1="130" x2="800" y2="270" stroke="#3E1F00" stroke-width="2"/>
+          <text x="560" y="292">④ 鏡腳比一般眼鏡粗、厚、重</text>
+          <text x="330" y="320" font-size="14" font-weight="400" fill="#7a5a45">（示意圖，非特定廠牌；鏡頭與指示燈左右位置依款式不同）</text>
+        </g>
+      </svg>
+      <figcaption>正面看：鏡頭、指示燈、粗壯鉸鏈。注意：<b>越來越多款式沒有鏡頭</b>，①② 看不到不代表安全。</figcaption>
+    </figure>
+
+    <figure class="diagram">
+      <svg viewBox="0 0 900 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="智慧眼鏡鏡腳側面示意圖與一般眼鏡對照">
+        <g font-family="Microsoft JhengHei, Noto Sans TC, sans-serif" fill="#3E1F00">
+          <text x="30" y="52" font-size="18" font-weight="700">一般光學眼鏡鏡腳</text>
+          <path d="M60,90 L720,90 Q745,90 750,108 L770,150" stroke="#8a6a55" stroke-width="7" fill="none" stroke-linecap="round"/>
+          <circle cx="60" cy="90" r="6" fill="#8a6a55"/>
+          <text x="30" y="145" font-size="14" fill="#7a5a45">扁、輕、光滑；只有鉸鏈處一顆小螺絲</text>
+          <text x="30" y="215" font-size="18" font-weight="700">智慧眼鏡鏡腳</text>
+          <path d="M60,240 L700,240 Q760,240 770,300 L780,340" stroke="#3E1F00" stroke-width="30" fill="none" stroke-linecap="round"/>
+          <rect x="40" y="218" width="48" height="44" rx="8" fill="#3E1F00"/>
+          <rect x="150" y="214" width="34" height="12" rx="4" fill="#e9944a" stroke="#3E1F00" stroke-width="2"/>
+          <rect x="300" y="222" width="150" height="8" rx="4" fill="#c9a27e" opacity=".9"/>
+          <circle cx="120" cy="252" r="3" fill="#fff"/><circle cx="132" cy="252" r="3" fill="#fff"/>
+          <g fill="#fff"><rect x="610" y="233" width="4" height="14" rx="1"/><rect x="620" y="233" width="4" height="14" rx="1"/><rect x="630" y="233" width="4" height="14" rx="1"/><rect x="640" y="233" width="4" height="14" rx="1"/><rect x="650" y="233" width="4" height="14" rx="1"/></g>
+          <circle cx="768" cy="322" r="5" fill="#ffd700" stroke="#3E1F00" stroke-width="1.5"/>
+          <circle cx="775" cy="336" r="5" fill="#ffd700" stroke="#3E1F00" stroke-width="1.5"/>
+          <rect x="200" y="222" width="70" height="36" rx="3" fill="#1b1b1b" opacity=".9" transform="rotate(-2 235 240)"/>
+          <path d="M200,230 L270,230 M200,248 L270,248" stroke="#3a3a3a" stroke-width="1" transform="rotate(-2 235 240)"/>
+          <g font-size="16" font-weight="700">
+            <line x1="167" y1="214" x2="167" y2="180" stroke="#3E1F00" stroke-width="2"/>
+            <text x="120" y="172">⑤ 實體按鍵／電源開關</text>
+            <line x1="375" y1="222" x2="375" y2="190" stroke="#3E1F00" stroke-width="2"/>
+            <text x="330" y="182">⑥ 觸控條（外側）</text>
+            <line x1="126" y1="258" x2="110" y2="300" stroke="#3E1F00" stroke-width="2"/>
+            <text x="40" y="322">⑦ 麥克風小孔</text>
+            <line x1="632" y1="250" x2="632" y2="300" stroke="#3E1F00" stroke-width="2"/>
+            <text x="560" y="322">⑧ 喇叭格柵（靠耳朵）</text>
+            <line x1="765" y1="335" x2="700" y2="380" stroke="#3E1F00" stroke-width="2"/>
+            <text x="520" y="400">⑨ 金屬充電接點／USB-C 孔（鏡腳末端或內側）</text>
+            <line x1="235" y1="260" x2="260" y2="340" stroke="#3E1F00" stroke-width="2"/>
+            <text x="200" y="362">⑩ 膠帶、貼紙包覆處（分科案例正是這樣被看穿）</text>
+          </g>
+        </g>
+      </svg>
+      <figcaption>側面看：鏡腳是重點。整副重量通常 40 克以上，一般眼鏡多在 20–35 克，拿在手上差異明顯。</figcaption>
+    </figure>
+
+    <div class="card">
+      <h3>入場・巡場時掃一眼</h3>
+      <ul>
+        <li><b>鏡腳</b>比一般眼鏡粗、厚、重，鉸鏈處又方又壯</li>
+        <li>鏡腳上有<b>按鍵、觸控條、金屬充電接點、喇叭格柵、小孔</b>（麥克風）</li>
+        <li>鏡框外側上角有<b>小圓孔</b>（鏡頭）或<b>小白點</b>（指示燈）</li>
+        <li>鏡腳上<b>新貼黑膠帶、貼紙</b>——分科案例就是這樣被看穿的</li>
+      </ul>
+    </div>
+
+    <div class="card cool">
+      <h3>考試中：人不對勁就走近</h3>
+      <ul>
+        <li>頭愈寫愈低，像在把試卷對準鏡頭；盯著空中某個角落不動（在讀鏡片上的字）</li>
+        <li>反覆輕摸鏡腳（操作觸控）、嘴唇微動（語音指令）</li>
+        <li>大熱天穿帽 T 戴帽、頭髮蓋耳際、<b>中途換眼鏡</b></li>
+      </ul>
+    </div>
+
+    <div class="card coral">
+      <h3>別誤判</h3>
+      <ul>
+        <li><b>粗黑框 ≠ 智慧眼鏡</b>：要看多出來的孔、鍵、接點，不是看粗細</li>
+        <li><b>找不到鏡頭 ≠ 安全</b>：2026 年起多款沒鏡頭</li>
+        <li>金屬框、鈦金屬腳的鉸鏈也會讓探測器響——看響的是「兩點」還是「整段」</li>
+        <li>助聽器、電子耳是輔具，事前已登錄，不列入查驗</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 三步確認 -->
+  <section>
+    <h2>懷疑時：三步確認</h2>
+    <p style="margin-bottom:2mm">原則：<b>考試中不打斷作答</b>。當場要學生拔眼鏡會中斷考試，若判斷錯誤反而衍生爭議。先記錄、考後再查驗。</p>
+
+    <figure class="diagram">
+      <svg viewBox="0 70 900 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="三步確認流程圖">
+        <defs><marker id="arr2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#3E1F00"/></marker></defs>
+        <g font-family="Microsoft JhengHei, Noto Sans TC, sans-serif" text-anchor="middle">
+          <rect x="20" y="90" width="180" height="100" rx="14" fill="#FFE8E5" stroke="#e76f51" stroke-width="2"/>
+          <text x="110" y="128" font-size="16" font-weight="700" fill="#3E1F00">外形或行為可疑</text>
+          <text x="110" y="152" font-size="13" fill="#7a5a45">走近正面觀察</text>
+          <text x="110" y="172" font-size="13" fill="#7a5a45">但不打斷作答</text>
+          <line x1="200" y1="140" x2="240" y2="140" stroke="#3E1F00" stroke-width="2.5" marker-end="url(#arr2)"/>
+          <rect x="245" y="80" width="190" height="120" rx="14" fill="#FFF2E5" stroke="#e9944a" stroke-width="2"/>
+          <circle cx="272" cy="102" r="13" fill="#3E1F00"/><text x="272" y="107" font-size="14" fill="#FFFAF5" font-weight="700">1</text>
+          <text x="345" y="128" font-size="16" font-weight="700" fill="#3E1F00">考試中拍照記錄</text>
+          <text x="345" y="150" font-size="12" fill="#7a5a45">拍眼鏡外觀（鏡腳、</text>
+          <text x="345" y="168" font-size="12" fill="#7a5a45">鉸鏈、膠帶），記座號</text>
+          <text x="345" y="186" font-size="12" fill="#7a5a45">不要求學生摘下</text>
+          <line x1="435" y1="140" x2="475" y2="140" stroke="#3E1F00" stroke-width="2.5" marker-end="url(#arr2)"/>
+          <rect x="480" y="80" width="190" height="120" rx="14" fill="#FFF2E5" stroke="#e9944a" stroke-width="2"/>
+          <circle cx="507" cy="102" r="13" fill="#3E1F00"/><text x="507" y="107" font-size="14" fill="#FFFAF5" font-weight="700">2</text>
+          <text x="580" y="128" font-size="16" font-weight="700" fill="#3E1F00">考後請學生查驗</text>
+          <text x="580" y="150" font-size="12" fill="#7a5a45">請學生自行摘下平放</text>
+          <text x="580" y="168" font-size="12" fill="#7a5a45">看開關・按鍵・接點・膠帶</text>
+          <text x="580" y="186" font-size="12" fill="#7a5a45">摸溫度、感受重量</text>
+          <line x1="670" y1="140" x2="710" y2="140" stroke="#3E1F00" stroke-width="2.5" marker-end="url(#arr2)"/>
+          <rect x="715" y="80" width="170" height="120" rx="14" fill="#EEF9FC" stroke="#2b5f8a" stroke-width="2"/>
+          <circle cx="742" cy="102" r="13" fill="#3E1F00"/><text x="742" y="107" font-size="14" fill="#FFFAF5" font-weight="700">3</text>
+          <text x="805" y="128" font-size="16" font-weight="700" fill="#3E1F00">無法判斷</text>
+          <text x="805" y="150" font-size="16" font-weight="700" fill="#3E1F00">→ 帶到教務處</text>
+          <text x="805" y="172" font-size="12" fill="#7a5a45">金屬探測器確認</text>
+          <text x="805" y="190" font-size="12" fill="#7a5a45">試務組接手處理</text>
+          <text x="450" y="248" font-size="14" fill="#3E1F00" font-weight="700">確認為智慧眼鏡 → 拍照存證、保管、記錄、通報試務組</text>
+          <text x="450" y="268" font-size="13" fill="#4a7c59" font-weight="700">確認為普通眼鏡 → 致謝、歸還</text>
+        </g>
+      </svg>
+    </figure>
+
+    <div class="row3">
+      <div class="step">
+        <p><span class="num">1</span><b>考試中：拍照記錄，不打斷</b></p>
+        <p>走近觀察並拍下眼鏡外觀（鏡腳、鉸鏈、膠帶），記下座號。<b>不要求學生當場摘下</b>。</p>
+      </div>
+      <div class="step">
+        <p><span class="num">2</span><b>考後：請學生上前查驗</b></p>
+        <p>請學生自行摘下平放。看開關、按鍵、孔、接點、膠帶、品牌字；摸鏡腳溫度，拿起感受重量。</p>
+      </div>
+      <div class="step">
+        <p><span class="num">3</span><b>無法判斷 → 帶到教務處</b></p>
+        <p>金屬探測器沿鏡腳掃，跟普通眼鏡比較；由試務組接手後續處理。</p>
+      </div>
+    </div>
+    <p style="margin-top:2mm;color:var(--soft);font-size:11pt">步驟 1 不需要任何設備，<b style="color:var(--ink)">任何一位監考老師今天就做得到</b>。步驟 2 的溫度與重量檢查也不需器材。</p>
+  </section>
+
+  <!-- 款式一覽 -->
+  <section>
+    <h2>常見款式一覽（老師看一眼有個印象就好）</h2>
+    <p>款式只會越來越多、越來越像普通眼鏡。重點不是背型號，而是知道「<b>有鏡頭</b>」和「<b>沒鏡頭但有顯示</b>」是兩種不同的東西。</p>
+
+    <h3 style="margin-top:4mm;color:var(--coral)">A 類：有鏡頭（可拍照／錄影＋語音）</h3>
+    <p style="font-size:10.5pt;color:var(--soft);margin-bottom:2mm">辨識線索最多：鏡框外側有鏡頭小孔、指示燈，鏡腳明顯粗壯。</p>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="photos/02_手持正面.jpg" alt="Ray-Ban Meta 正面">
+        <div class="product-info">
+          <h3>Ray-Ban Meta（第一、二代）</h3>
+          <span class="tag">有鏡頭・無顯示</span>
+          <p>外側上角鏡頭＋對側指示燈、粗鏡腳、觸控條、末端充電接點。最常見的款式，遠看像一般 Ray-Ban。</p>
+          <a href="https://www.meta.com/tw/smart-glasses/" target="_blank" rel="noopener">meta.com/smart-glasses</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="photos/11_RayBanDisplay_04.jpg" alt="Meta Ray-Ban Display">
+        <div class="product-info">
+          <h3>Meta Ray-Ban Display</h3>
+          <span class="tag" style="background:var(--coral)">有鏡頭・有顯示</span>
+          <p>鏡片內有顯示區，斜角光下可見矩形反光。搭配<b>手腕黑色手環</b>操控——看到學生戴這種腕帶，眼鏡就要查。</p>
+          <a href="https://www.meta.com/tw/smart-glasses/" target="_blank" rel="noopener">meta.com/smart-glasses</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="photos/09_OakleyMeta_HSTN.jpg" alt="Oakley Meta HSTN">
+        <div class="product-info">
+          <h3>Oakley Meta HSTN／Vanguard</h3>
+          <span class="tag">有鏡頭・無顯示</span>
+          <p>運動款，鏡框角落一樣有鏡頭與指示燈，粗壯鏡腳。可能出現在體育班學生身上。</p>
+          <a href="https://www.oakley.com/" target="_blank" rel="noopener">oakley.com</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="photos/14_HTC_ViveEagle_紅框與充電盒.jpg" alt="HTC VIVE Eagle">
+        <div class="product-info">
+          <h3>HTC VIVE Eagle</h3>
+          <span class="tag" style="background:var(--green)">台灣品牌・有鏡頭</span>
+          <p>2025 年在台上市。鏡腳有觸控與按鍵，附充電盒。</p>
+          <a href="https://www.vive.com/" target="_blank" rel="noopener">vive.com</a>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="margin-top:5mm;color:var(--coral)">B 類：無鏡頭（純顯示或純語音——更難辨識）</h3>
+    <p style="font-size:10.5pt;color:var(--soft);margin-bottom:2mm">沒有鏡頭、沒有指示燈，外觀最接近普通眼鏡。要靠鏡腳厚度、接點、重量、溫度來判斷。</p>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="photos/08_EvenG2_正面_像普通眼鏡.jpg" alt="Even Realities G2">
+        <div class="product-info">
+          <h3>Even Realities G1／G2</h3>
+          <span class="tag" style="background:var(--coral)">無鏡頭・有顯示</span>
+          <p>鈦合金細框，<b>幾乎與一般眼鏡無異</b>，只有鏡腳末端稍微加粗。最難辨識，靠重量、末端接點、鏡片斜角反光、發熱。</p>
+          <a href="https://www.evenrealities.com/" target="_blank" rel="noopener">evenrealities.com</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="photos/05_RayBanStories_指示燈亮.jpg" alt="錄影指示燈亮起">
+        <div class="product-info">
+          <h3>平價純語音款（多家推出）</h3>
+          <span class="tag" style="background:var(--soft)">無鏡頭・純語音</span>
+          <p>外觀與時尚眼鏡相同，只剩鏡腳厚度、接點、按鍵可看。部分定價已降至美金三百元以下，學生取得門檻降低。</p>
+        </div>
+      </div>
+    </div>
+    <p style="color:var(--soft);font-size:10pt;margin-top:2mm">產品資訊依 2026 年 9 月公開報導整理。試務組可在監考說明會準備官方照片供老師傳閱。</p>
+  </section>
+
+
+</div>
+
+<!-- ==================== 處置與依據 ==================== -->
+<div class="page">
+
+  <!-- 確認後處置 -->
+  <section>
+    <h2>確認後怎麼辦</h2>
+    <p style="color:var(--soft);margin-bottom:2mm">經三步確認（見第一頁）判定後，依結果處理。原則：不當眾拆機、不追問「有沒有在用」、不與學生對峙。</p>
+    <div class="row3">
+      <div class="card coral">
+        <h3>確認是智慧眼鏡</h3>
+        <ol>
+          <li><b>拍照存證</b>：正面、側面、鏡腳內側、膠帶處。</li>
+          <li><b>保管眼鏡</b>，放入信封標記座號、時間、科目。</li>
+          <li><b>通報試務組</b>，由試務組接手後續處理。</li>
+        </ol>
+      </div>
+      <div class="card mint">
+        <h3>確認是普通眼鏡</h3>
+        <ol>
+          <li>向學生致謝配合。</li>
+          <li>歸還眼鏡。</li>
+        </ol>
+      </div>
+      <div class="card">
+        <h3>學生拒絕配合</h3>
+        <ol>
+          <li>記錄事實（時間、座號、拒絕情形）。</li>
+          <li>通報試務組，<b>不對峙</b>。</li>
+          <li>依 116 簡章，拒絕查驗是最重情節。</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- 校規依據 -->
+  <section>
+    <h2>校規依據</h2>
+    <div class="card cool">
+      <p><b>本校段考試場規則第（六）條</b>：相關規定<b>比照大學入學考試中心每年度考試簡章「試場規則及違規處理辦法」</b>。</p>
+    </div>
+    <div class="card cool">
+      <p><b>大考中心 116 學年度簡章（2026-09 公告）</b>：</p>
+      <ul>
+        <li>攜帶智慧眼鏡入座，<b>無論是否使用，一律視同舞弊，該節不予計分</b>。</li>
+        <li>拒絕交出或拒絕配合查驗，<b>取消考試資格</b>。</li>
+        <li>考生報名即同意接受電子及金屬探測設備檢查。</li>
+      </ul>
+    </div>
+    <div class="bigbox">
+      帶進座位就違規。老師只要確認「這是智慧眼鏡」，不必證明「他有在用」。
+    </div>
+  </section>
+
+  <!-- 藍牙 App -->
+  <section>
+    <h2>零成本輔助：藍牙掃描 App</h2>
+    <div class="card mint">
+      <p>「Nearby Glasses」（德國學者開發、開源、免費）可掃描低功耗藍牙訊號、比對廠商識別碼。</p>
+      <ul>
+        <li><b>能做的</b>：巡場人員在走廊開著掃，跳通知就提高該試場巡視密度。</li>
+        <li><b>不能做的</b>：當確認工具或證據。只認 Meta/Snap 家族，關藍牙就掃不到，也無法定位是哪個學生。</li>
+      </ul>
+      <p>沒有探測器時，「App 預警＋摘下目視＋摸溫度」是零成本可行的組合。</p>
+    </div>
+  </section>
+
+  <!-- 資料來源 -->
+  <section style="font-size:9pt;line-height:16pt;color:var(--soft)">
+    <h3 style="font-size:10pt">資料來源</h3>
+    <p>中央社（2026-07-27）分科測驗首度啟用金屬探測報導｜聯合新聞網（2026-06-11）台大 AI 眼鏡舞弊報導｜聯合新聞網（2026-09）116 簡章公告報導｜公視新聞網｜自由時報｜Tom's Guide 智慧眼鏡辨識特徵｜Nearby Glasses (GitHub: yjeanrenaud)｜本校段考試場規則。示意照片為校內參考用，不對外發布。</p>
+  </section>
+
+  <div class="ft">
+    <span>照片為校內參考用，不對外發布。本文件供校內監考人員參考，非正式公文。</span>
+    <span>國立鳳新高中 教務處試務組｜2026-09 初稿</span>
+  </div>
+</div>
+
+</body>
+</html>
