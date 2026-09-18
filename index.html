@@ -179,7 +179,7 @@ section:nth-child(even){background:#f5f4f2;border-radius:12px;padding:4mm 5mm;ma
     </figure>
 
     <figure class="diagram">
-      <svg viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="智慧眼鏡鏡腳側面示意圖與一般眼鏡對照">
+      <svg viewBox="0 0 900 530" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="智慧眼鏡鏡腳側面示意圖與一般眼鏡對照">
         <g font-family="Microsoft JhengHei, Noto Sans TC, sans-serif" fill="#3E1F00">
           <!-- 一般眼鏡 -->
           <rect x="24" y="34" width="8" height="22" rx="3" fill="#8a6a55"/>
@@ -191,32 +191,34 @@ section:nth-child(even){background:#f5f4f2;border-radius:12px;padding:4mm 5mm;ma
           <!-- 分隔線 -->
           <line x1="30" y1="175" x2="870" y2="175" stroke="#d9cec4" stroke-width="1.5" stroke-dasharray="6,4"/>
 
-          <!-- 智慧眼鏡（整組下移 50px） -->
-          <rect x="24" y="249" width="8" height="22" rx="3" fill="#e9944a"/>
-          <text x="40" y="267" font-size="18" font-weight="700">⚠ 智慧眼鏡鏡腳</text>
-          <path d="M60,290 L700,290 Q760,290 770,350 L780,390" stroke="#3E1F00" stroke-width="30" fill="none" stroke-linecap="round"/>
-          <rect x="40" y="268" width="48" height="44" rx="8" fill="#3E1F00"/>
-          <rect x="150" y="264" width="34" height="12" rx="4" fill="#e9944a" stroke="#3E1F00" stroke-width="2"/>
-          <rect x="300" y="272" width="150" height="8" rx="4" fill="#c9a27e" opacity=".9"/>
-          <circle cx="120" cy="302" r="3" fill="#fff"/><circle cx="132" cy="302" r="3" fill="#fff"/>
-          <g fill="#fff"><rect x="610" y="283" width="4" height="14" rx="1"/><rect x="620" y="283" width="4" height="14" rx="1"/><rect x="630" y="283" width="4" height="14" rx="1"/><rect x="640" y="283" width="4" height="14" rx="1"/><rect x="650" y="283" width="4" height="14" rx="1"/></g>
-          <circle cx="768" cy="372" r="5" fill="#ffd700" stroke="#3E1F00" stroke-width="1.5"/>
-          <circle cx="775" cy="386" r="5" fill="#ffd700" stroke="#3E1F00" stroke-width="1.5"/>
-          <rect x="200" y="272" width="70" height="36" rx="3" fill="#1b1b1b" opacity=".9" transform="rotate(-2 235 290)"/>
-          <path d="M200,280 L270,280 M200,298 L270,298" stroke="#3a3a3a" stroke-width="1" transform="rotate(-2 235 290)"/>
+          <!-- 智慧眼鏡標題（獨立，不與圖形重疊） -->
+          <rect x="24" y="199" width="8" height="22" rx="3" fill="#e9944a"/>
+          <text x="40" y="217" font-size="18" font-weight="700">⚠ 智慧眼鏡鏡腳</text>
+
+          <!-- 智慧眼鏡圖形（從 y=260 開始，與標題隔 40px） -->
+          <path d="M60,300 L700,300 Q760,300 770,360 L780,400" stroke="#3E1F00" stroke-width="30" fill="none" stroke-linecap="round"/>
+          <rect x="40" y="278" width="48" height="44" rx="8" fill="#3E1F00"/>
+          <rect x="150" y="274" width="34" height="12" rx="4" fill="#e9944a" stroke="#3E1F00" stroke-width="2"/>
+          <rect x="300" y="282" width="150" height="8" rx="4" fill="#c9a27e" opacity=".9"/>
+          <circle cx="120" cy="312" r="3" fill="#fff"/><circle cx="132" cy="312" r="3" fill="#fff"/>
+          <g fill="#fff"><rect x="610" y="293" width="4" height="14" rx="1"/><rect x="620" y="293" width="4" height="14" rx="1"/><rect x="630" y="293" width="4" height="14" rx="1"/><rect x="640" y="293" width="4" height="14" rx="1"/><rect x="650" y="293" width="4" height="14" rx="1"/></g>
+          <circle cx="768" cy="382" r="5" fill="#ffd700" stroke="#3E1F00" stroke-width="1.5"/>
+          <circle cx="775" cy="396" r="5" fill="#ffd700" stroke="#3E1F00" stroke-width="1.5"/>
+          <rect x="200" y="282" width="70" height="36" rx="3" fill="#1b1b1b" opacity=".9" transform="rotate(-2 235 300)"/>
+          <path d="M200,290 L270,290 M200,308 L270,308" stroke="#3a3a3a" stroke-width="1" transform="rotate(-2 235 300)"/>
           <g font-size="16" font-weight="700">
-            <line x1="167" y1="264" x2="167" y2="230" stroke="#3E1F00" stroke-width="2"/>
-            <text x="120" y="222">⑤ 實體按鍵／電源開關</text>
-            <line x1="375" y1="272" x2="375" y2="240" stroke="#3E1F00" stroke-width="2"/>
-            <text x="330" y="232">⑥ 觸控條（外側）</text>
-            <line x1="126" y1="308" x2="110" y2="350" stroke="#3E1F00" stroke-width="2"/>
-            <text x="40" y="372">⑦ 麥克風小孔</text>
-            <line x1="632" y1="300" x2="632" y2="350" stroke="#3E1F00" stroke-width="2"/>
-            <text x="560" y="372">⑧ 喇叭格柵（靠耳朵）</text>
-            <line x1="765" y1="385" x2="700" y2="430" stroke="#3E1F00" stroke-width="2"/>
-            <text x="520" y="450">⑨ 金屬充電接點／USB-C 孔（鏡腳末端或內側）</text>
-            <line x1="235" y1="310" x2="260" y2="390" stroke="#3E1F00" stroke-width="2"/>
-            <text x="200" y="412">⑩ 膠帶、貼紙包覆處（分科案例正是這樣被看穿）</text>
+            <line x1="167" y1="274" x2="167" y2="245" stroke="#3E1F00" stroke-width="2"/>
+            <text x="120" y="240">⑤ 實體按鍵／電源開關</text>
+            <line x1="375" y1="282" x2="375" y2="250" stroke="#3E1F00" stroke-width="2"/>
+            <text x="330" y="245">⑥ 觸控條（外側）</text>
+            <line x1="126" y1="318" x2="110" y2="360" stroke="#3E1F00" stroke-width="2"/>
+            <text x="40" y="382">⑦ 麥克風小孔</text>
+            <line x1="632" y1="310" x2="632" y2="360" stroke="#3E1F00" stroke-width="2"/>
+            <text x="560" y="382">⑧ 喇叭格柵（靠耳朵）</text>
+            <line x1="765" y1="395" x2="700" y2="440" stroke="#3E1F00" stroke-width="2"/>
+            <text x="520" y="460">⑨ 金屬充電接點／USB-C 孔（鏡腳末端或內側）</text>
+            <line x1="235" y1="320" x2="260" y2="400" stroke="#3E1F00" stroke-width="2"/>
+            <text x="200" y="422">⑩ 膠帶、貼紙包覆處（分科案例正是這樣被看穿）</text>
           </g>
         </g>
       </svg>
