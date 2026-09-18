@@ -74,7 +74,9 @@ th{background:var(--bg2);font-weight:700;font-size:11pt}
 
 /* product grid */
 .product-grid{display:grid;grid-template-columns:1fr 1fr;gap:4mm;margin:3mm 0}
-.product-card{background:#fff;border-radius:10px;overflow:hidden;border:1px solid var(--line);display:flex;flex-direction:row;box-shadow:0 1px 4px rgba(73,34,7,.04)}
+.product-card{background:#fff;border-radius:10px;overflow:hidden;border:1px solid var(--line);display:flex;flex-direction:row;box-shadow:0 1px 4px rgba(73,34,7,.04);text-decoration:none;color:inherit;transition:box-shadow .2s,border-color .2s;cursor:pointer}
+.product-card:hover{box-shadow:0 3px 12px rgba(73,34,7,.1);border-color:var(--caramel)}
+.link-label{display:block;margin-top:2mm;font-size:9pt;color:var(--caramel);font-weight:600}
 .product-card img{width:45%;height:auto;min-height:30mm;object-fit:cover;display:block}
 .product-info{padding:2.5mm 3mm;flex:1}
 .product-info h3{font-size:11pt;margin:0 0 1mm}
@@ -302,64 +304,65 @@ section:nth-child(even){background:#f5f4f2;border-radius:12px;padding:4mm 5mm;ma
     <h3 style="margin-top:4mm;color:var(--coral)">A 類：有鏡頭（可拍照／錄影＋語音）</h3>
     <p style="font-size:10.5pt;color:var(--soft);margin-bottom:2mm">辨識線索最多：鏡框外側有鏡頭小孔、指示燈，鏡腳明顯粗壯。</p>
     <div class="product-grid">
-      <div class="product-card">
+      <a class="product-card" href="https://www.meta.com/tw/ai-glasses/ray-ban-meta/" target="_blank" rel="noopener">
         <img src="photos/02_手持正面.jpg" alt="Ray-Ban Meta 正面">
         <div class="product-info">
           <h3>Ray-Ban Meta（第一、二代）</h3>
           <span class="tag">有鏡頭・無顯示</span>
           <p>外側上角鏡頭＋對側指示燈、粗鏡腳、觸控條、末端充電接點。最常見的款式，遠看像一般 Ray-Ban。</p>
-          <a href="https://www.meta.com/tw/smart-glasses/" target="_blank" rel="noopener">meta.com/smart-glasses</a>
+          <span class="link-label">meta.com → 商品頁</span>
         </div>
-      </div>
-      <div class="product-card">
+      </a>
+      <a class="product-card" href="https://www.meta.com/tw/ai-glasses/meta-ray-ban-display/" target="_blank" rel="noopener">
         <img src="photos/11_RayBanDisplay_04.jpg" alt="Meta Ray-Ban Display">
         <div class="product-info">
           <h3>Meta Ray-Ban Display</h3>
           <span class="tag" style="background:var(--coral)">有鏡頭・有顯示</span>
           <p>鏡片內有顯示區，斜角光下可見矩形反光。搭配<b>手腕黑色手環</b>操控——看到學生戴這種腕帶，眼鏡就要查。</p>
-          <a href="https://www.meta.com/tw/smart-glasses/" target="_blank" rel="noopener">meta.com/smart-glasses</a>
+          <span class="link-label">meta.com → 商品頁</span>
         </div>
-      </div>
-      <div class="product-card">
+      </a>
+      <a class="product-card" href="https://www.meta.com/tw/ai-glasses/oakley-meta/" target="_blank" rel="noopener">
         <img src="photos/09_OakleyMeta_HSTN.jpg" alt="Oakley Meta HSTN">
         <div class="product-info">
           <h3>Oakley Meta HSTN／Vanguard</h3>
           <span class="tag">有鏡頭・無顯示</span>
           <p>運動款，鏡框角落一樣有鏡頭與指示燈，粗壯鏡腳。可能出現在體育班學生身上。</p>
-          <a href="https://www.oakley.com/" target="_blank" rel="noopener">oakley.com</a>
+          <span class="link-label">meta.com → 商品頁</span>
         </div>
-      </div>
-      <div class="product-card">
+      </a>
+      <a class="product-card" href="https://www.vive.com/tw/xr-glasses/vive-eagle/" target="_blank" rel="noopener">
         <img src="photos/14_HTC_ViveEagle_紅框與充電盒.jpg" alt="HTC VIVE Eagle">
         <div class="product-info">
           <h3>HTC VIVE Eagle</h3>
           <span class="tag" style="background:var(--green)">台灣品牌・有鏡頭</span>
           <p>2025 年在台上市。鏡腳有觸控與按鍵，附充電盒。</p>
-          <a href="https://www.vive.com/" target="_blank" rel="noopener">vive.com</a>
+          <span class="link-label">vive.com → 商品頁</span>
         </div>
-      </div>
+      </a>
     </div>
 
     <h3 style="margin-top:5mm;color:var(--coral)">B 類：無鏡頭（純顯示或純語音——更難辨識）</h3>
     <p style="font-size:10.5pt;color:var(--soft);margin-bottom:2mm">沒有鏡頭、沒有指示燈，外觀最接近普通眼鏡。要靠鏡腳厚度、接點、重量、溫度來判斷。</p>
     <div class="product-grid">
-      <div class="product-card">
+      <a class="product-card" href="https://www.evenrealities.com/" target="_blank" rel="noopener">
         <img src="photos/08_EvenG2_正面_像普通眼鏡.jpg" alt="Even Realities G2">
         <div class="product-info">
           <h3>Even Realities G1／G2</h3>
           <span class="tag" style="background:var(--coral)">無鏡頭・有顯示</span>
           <p>鈦合金細框，<b>幾乎與一般眼鏡無異</b>，只有鏡腳末端稍微加粗。最難辨識，靠重量、末端接點、鏡片斜角反光、發熱。</p>
-          <a href="https://www.evenrealities.com/" target="_blank" rel="noopener">evenrealities.com</a>
+          <span class="link-label">evenrealities.com → 官網</span>
         </div>
-      </div>
-      <div class="product-card">
+      </a>
+      <a class="product-card" href="https://www.amazon.com/s?k=audio+smart+glasses" target="_blank" rel="noopener">
         <img src="photos/05_RayBanStories_指示燈亮.jpg" alt="錄影指示燈亮起">
         <div class="product-info">
           <h3>平價純語音款（多家推出）</h3>
           <span class="tag" style="background:var(--soft)">無鏡頭・純語音</span>
           <p>外觀與時尚眼鏡相同，只剩鏡腳厚度、接點、按鍵可看。部分定價已降至美金三百元以下，學生取得門檻降低。</p>
+          <span class="link-label">參考產品搜尋</span>
         </div>
-      </div>
+      </a>
     </div>
     <p style="color:var(--soft);font-size:10pt;margin-top:2mm">產品資訊依 2026 年 9 月公開報導整理。試務組可在監考說明會準備官方照片供老師傳閱。</p>
   </section>
