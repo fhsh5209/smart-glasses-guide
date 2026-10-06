@@ -110,6 +110,29 @@ section:nth-child(even){background:#f5f4f2;border-radius:12px;padding:4mm 5mm;ma
 .app-links{display:flex;gap:3mm;margin-top:2mm;flex-wrap:wrap}
 .app-links a{display:inline-flex;align-items:center;gap:1.5mm;padding:1.5mm 3mm;border-radius:8px;background:var(--ink);color:var(--bg);font-size:10pt;font-weight:600;text-decoration:none;transition:background .2s}
 .app-links a:hover{background:#6b4630}
+
+/* ===== 手機版 ===== */
+@media (max-width:640px){
+  body{font-size:11pt;line-height:20pt}
+  .page{padding:6mm 4mm 8mm}
+  .hd{padding:20px 16px 16px;border-radius:8px}
+  .hd .kicker{font-size:10pt}
+  .hd h1{font-size:16pt;letter-spacing:1px}
+  .hd .meta{font-size:8pt}
+  h2{font-size:13pt}
+  .row2,.row3{grid-template-columns:1fr}
+  .product-grid{grid-template-columns:1fr}
+  .product-card{flex-direction:column}
+  .product-card img{width:100%;max-height:45vw}
+  .photos{grid-template-columns:1fr}
+  section:nth-child(even){margin-left:0;margin-right:0;padding:3mm 3mm;border-radius:8px}
+  .ft{flex-direction:column;gap:2mm}
+  figure.diagram{padding:1.5mm}
+  .app-links{flex-direction:column}
+  .app-links a{justify-content:center}
+  .intro-flex{flex-direction:column}
+  .intro-flex figure{flex:none!important}
+}
 </style>
 </head>
 <body>
@@ -138,7 +161,7 @@ section:nth-child(even){background:#f5f4f2;border-radius:12px;padding:4mm 5mm;ma
     </table>
 
     <h3 style="margin-top:5mm">重點注意項目：鏡腳</h3>
-    <div style="display:flex;gap:5mm;align-items:flex-start;margin-bottom:3mm">
+    <div class="intro-flex" style="display:flex;gap:5mm;align-items:flex-start;margin-bottom:3mm">
       <div style="flex:1">
         <p>原則上電池、晶片、喇叭、麥克風都在鏡腳裡。但越來越多新款眼鏡<b>沒有鏡頭</b>，只靠鏡片顯示或語音運作，外觀跟普通眼鏡幾乎一樣。</p>
         <p style="margin-top:2mm">右圖為「有顯示」款的鏡片示意圖，<b>文字直接投在鏡片上，只有戴的人看得到</b>，旁人從正面無法察覺，因此需要檢查鏡腳輔助判斷。</p>
